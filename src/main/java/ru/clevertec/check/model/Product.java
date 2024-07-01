@@ -4,8 +4,16 @@ public class Product {
     private int id;
     private String description;
     private double price;
-    private int quantity_in_stock;
-    private boolean wholesale_product;
+    private int quantityInStock;
+    private boolean wholesaleProduct;
+
+    public Product(int id, String description, int quantityInStock, double price, boolean wholesaleProduct) {
+        this.id = id;
+        this.description = description;
+        this.price = price;
+        this.quantityInStock = quantityInStock;
+        this.wholesaleProduct = wholesaleProduct;
+    }
 
     public int getId() {
         return id;
@@ -31,20 +39,20 @@ public class Product {
         this.price = price;
     }
 
-    public int getQuantity_in_stock() {
-        return quantity_in_stock;
+    public int getQuantityInStock() {
+        return quantityInStock;
     }
 
-    public void setQuantity_in_stock(int quantity_in_stock) {
-        this.quantity_in_stock = quantity_in_stock;
+    public void setQuantityInStock(int quantityInStock) {
+        this.quantityInStock = quantityInStock;
     }
 
-    public boolean isWholesale_product() {
-        return wholesale_product;
+    public boolean isWholesaleProduct() {
+        return wholesaleProduct;
     }
 
-    public void setWholesale_product(boolean wholesale_product) {
-        this.wholesale_product = wholesale_product;
+    public void setWholesaleProduct(boolean wholesaleProduct) {
+        this.wholesaleProduct = wholesaleProduct;
     }
 
     @Override
@@ -53,8 +61,8 @@ public class Product {
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", quantity_in_stock=" + quantity_in_stock +
-                ", wholesale_product=" + wholesale_product +
+                ", quantityInStock=" + quantityInStock +
+                ", wholesaleProduct=" + wholesaleProduct +
                 '}';
     }
 }

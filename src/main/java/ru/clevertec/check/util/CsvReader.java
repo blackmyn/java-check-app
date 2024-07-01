@@ -1,4 +1,14 @@
 package ru.clevertec.check.util;
 
-public class CsvReader {
+import ru.clevertec.check.model.DiscountCard;
+import ru.clevertec.check.model.Product;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class CsvReader<T> {
+    public abstract List<T> read(String filePath) throws IOException;
 }

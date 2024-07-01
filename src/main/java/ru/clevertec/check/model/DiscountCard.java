@@ -3,7 +3,13 @@ package ru.clevertec.check.model;
 public class DiscountCard {
     private int id;
     private int number;
-    private int discount_amount;
+    private int discountAmount;
+
+    public DiscountCard(int id, int number, int discountAmount) {
+        this.id = id;
+        this.number = number;
+        this.discountAmount = discountAmount;
+    }
 
     public int getId() {
         return id;
@@ -21,12 +27,12 @@ public class DiscountCard {
         this.number = number;
     }
 
-    public int getDiscount_amount() {
-        return discount_amount;
+    public int getDiscountAmount() {
+        return discountAmount;
     }
 
-    public void setDiscount_amount(int discount_amount) {
-        this.discount_amount = discount_amount;
+    public void setDiscountAmount(int discountAmount) {
+        this.discountAmount = discountAmount;
     }
 
     @Override
@@ -34,7 +40,7 @@ public class DiscountCard {
         return "DiscountCard{" +
                 "id=" + id +
                 ", number=" + number +
-                ", discount_amount=" + discount_amount +
+                ", discountAmount=" + discountAmount +
                 '}';
     }
 }
